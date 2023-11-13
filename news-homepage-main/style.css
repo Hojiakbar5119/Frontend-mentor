@@ -1,0 +1,213 @@
+/* I'm adding fonts style */
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/fonts/static/Inter-Bold.woff2') format('woff2'),
+        url('./assets/fonts/static/Inter-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/fonts/static/Inter-Regular.woff2') format('woff2'),
+        url('./assets/fonts/static/Inter-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/fonts/static/Inter-ExtraBold.woff2') format('woff2'),
+        url('./assets/fonts/static/Inter-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/*! Adding root */
+
+:root {
+    --text-font: "Inter";
+    --Soft-orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+    --Off-white: hsl(36, 100%, 99%);
+    --Grayish-blue: hsl(233, 8%, 79%);
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Very-dark-blue: hsl(240, 100%, 5%);
+
+}
+
+* {
+    font-family: var(--text-font);
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/*? For desktop */
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    width: 90vw;
+    height: 85vh;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav>ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav>.menu {
+    display: none;
+}
+
+.nav>ul li a {
+    text-decoration: none;
+    margin: 20px;
+    font-weight: 400;
+    color: var(--Dark-grayish-blue);
+}
+
+.nav>ul li a:hover {
+    color: var(--Soft-orange)
+}
+
+.main {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* justify-content: stretch; */
+
+}
+
+.submain_blog>img {
+    /* border: ; */
+    max-width: 1240px;
+}
+
+.submain_blog > .blog_design{
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    width: 1240px;
+    /* border: 1px solid blue; */
+    margin-top: 20px;
+}
+.blog_design>h1{
+    width: 25%;
+    font-weight: 800;
+    word-wrap: break-word;
+    font-size: 50px;
+    line-height: 0.985;
+}
+
+.blog_design>.text-button{
+    /* border: 1px solid red; */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.text-button>p{
+    color: var(--Very-dark-blue);
+    font-weight: 400;
+    font-size: 18px;
+
+}
+
+.text-button>button{
+    width: 250px;
+    height: 50px;
+    border: none;
+    background-color: var(--Very-dark-blue);
+    color: var(--Off-white);
+    font-size: 18px;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    font-family: var(--text-font);
+}
+
+.blog {
+    width: 400px;
+    background-color: var(--Very-dark-blue);
+    color: var(--Off-white);
+    padding: 20px 30px;
+}
+
+.blog>h1 {
+    color: var(--Soft-orange);
+    margin: 20px 0;
+}
+
+.blog ul {
+    list-style-type: none;
+}
+
+.blog ul li {
+    margin: 10px 0;
+}
+
+/* ? Nowadays learning cards */
+
+.cards{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.cards>.card{
+    display: flex;
+    gap: 20px;
+}
+.cards>.card>img{
+    width: 140px;
+    height: auto;
+    object-fit: contain;
+}
+.cards>.card> .rigth {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 250px;
+}
+.cards>.card> .rigth h1,.cards>.card> .rigth p{
+    color: var(--Grayish-blue);
+    /* border: 1px solid red; */
+}
+.cards>.card> .rigth h3{
+    font-size: 18px;
+}
+
+/*?  For mobile  */
+
+@media screen and (max-width:640px) {
+    .nav>ul {
+        display: none;
+    }
+
+    .nav>.menu {
+        display: block;
+    }
+}
